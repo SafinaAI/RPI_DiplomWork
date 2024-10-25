@@ -1,0 +1,400 @@
+@import "normalizez.scss"
+@import "resets.scss"
+
+$color-orange: #F19A56
+$color-orange-hover: #f6954b
+    
+//Общие значения
+
+/* khula-regular - latin */
+@font-face 
+  font-display: swapKhula
+  font-family: 'Khula!'
+  font-style: normal
+  font-weight: 400
+  src: local(Khula)
+  src: url('../fonts/khula-v12-latin-regular.woff2') format('woff2')
+
+/* khula-700 - latin */
+@font-face 
+  font-display: swap
+  font-family: '!'
+  font-style: normal
+  font-weight: 700
+  src: local(Khula)
+  src: url('../fonts/khula-v12-latin-700.woff2') format('woff2')
+
+
+/* carlito-regular - cyrillic_latin */
+@font-face 
+  font-display: swap
+  font-family: 'Carlito!'
+  font-style: normal
+  font-weight: 400
+  src: local(Carlito)
+  src: url('../fonts/carlito-v3-cyrillic_latin-regular.woff2') format('woff2')
+
+/* carlito-700 - cyrillic_latin */
+@font-face 
+  font-display: swap
+  font-family: 'Carlito!'
+  font-style: normal
+  font-weight: 700
+  src: local(Carlito)
+  src: url('../fonts/carlito-v3-cyrillic_latin-700.woff2') format('woff2')
+
+
+html
+    font-family: 'Khula!'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+body
+    font-weight: 400
+    letter-spacing: 1px
+    font-size: 16px
+    color: #2E2E2E
+    background-color: #ffffff
+
+// body, html
+//     font-family: "Khula", sans-serif
+
+a
+    text-decoration: none
+    color: #2E2E2E
+
+button
+    font-weight: 400
+    width: 136px
+    height: 44px
+    box-shadow: 0px 1px 5px 4px rgba(34, 60, 80, 0.2)
+    color: #2E2E2E
+    background-color: $color-orange
+    border-radius: 50px
+    border-style: none
+    // box-shadow: 0px 0px 15px 1px rgba(34, 60, 80, 0.2)
+    font-size: 18px
+    // &__:hover
+    //     background-color: $color-orange-hover
+
+.line
+    max-width: 284px
+    color: #2E2E2E
+    bottom: 0px
+    margin: 0
+    border: none
+    border-top: 2px solid #2e2e2ead
+
+.text-small
+    font-size: 35px
+    font-weight: 400
+    letter-spacing: 2px
+
+.text-big
+    font-size: 65px
+    font-weight: 400  
+    letter-spacing: 2px
+
+.text-superSmall
+    font-size: 15px
+    font-weight: 400  
+
+.textOrange
+    font-size: 32px
+    font-weight: 700
+    color: $color-orange
+
+.textBlack
+    font-size: 20px
+
+.orange-word
+    color: $color-orange
+
+//____HEADER____
+
+.container
+    // max-width: 1140px
+    max-width: 1260px
+    margin: 0 auto
+    position: relative
+
+.section-header
+    position: relative
+    height: 90px
+    padding-top: 16px
+    margin-bottom: 47px   
+    &__firstNav
+
+
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        box-shadow: 0px 7px 15px 4px rgba(34, 60, 80, 0.2)
+        border-radius: 50px
+    &__logo
+        width: 145px
+        margin-left: 25px
+    &__nav
+    &__list
+    &__item
+    &__btns
+        margin-top: 10px
+        margin-bottom: 10px
+        margin-right: 25px
+//Верхняя часть навигации ( гавигация по продуктам)      
+.firstNav
+    &__container
+        background-color: #F6F6F6
+        max-height: 50px
+        margin-top: 10px
+        margin-bottom: 13px
+    &__list
+        display: flex
+        justify-content: center
+        align-items: center
+    &__list-item
+        margin-right: 30px
+        padding: 10px
+        &:last-child
+            margin-right: 0px
+    &____br
+        rotate: 90deg
+
+//Основное меню по странице
+.nav-menu   
+    &__list
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__list-item
+        margin-right: 21px
+        font-size: 18px
+        width: 138px
+        text-align: center
+        font-weight: 600
+        &:last-child
+            margin-right: 0px
+
+.buttons    
+    &__LogIn
+        font-weight: 600
+        width: 136px
+        height: 44px
+        margin-right: 24px
+        box-shadow: 0px 1px 5px 4px rgba(34, 60, 80, 0.2)
+        color: #2E2E2E
+    &__LogIn-img
+        width: 20px
+        margin-right: 10px
+        color: #2E2E2E
+    &__LogUp
+        font-weight: 600
+        color: #2E2E2E
+        width: 184px
+        height: 44px
+        box-shadow: 0px 1px 5px 4px rgba(34, 60, 80, 0.2)
+
+//____________ПЕРВАЯ СЕКЦИЯ (ФОТО + ТЕКСТ)__________
+
+.main-section
+    max-height: 630px
+    &__container
+    
+//левая часть
+.left-wrapper
+    position: relative
+    &__img
+        position: relative
+
+//правая часть
+.right-wrapper
+    width: 372px
+    position: absolute
+    top: 100px
+    right: 180px
+    &__title
+        font-size: 38px
+        font-weight: 700
+        margin-bottom: 40px
+        min-width: 540px
+        line-height: 67px
+        text-align: right
+        letter-spacing: 2px
+    &__text
+        font-size: 25px
+        font-weight: 400
+        min-width: 540px
+        line-height: 30px
+        text-align: right
+        letter-spacing: 2px
+
+//_____________ВТОРАЯ СЕКЦИЯ ___________
+
+
+.secnd-section
+    min-height: 400px
+    &__container
+        position: relative
+        background-color: #FFF8F3
+        border-radius: 30px
+        // min-height: 400px
+        box-shadow: 1px 2px 8px 1px rgba(34, 60, 80, 0.21)   
+        padding-top: 100px
+        padding-left: 40px
+        padding-left:  40px    
+        margin-bottom: 20px       
+    &__text
+        font-size: 30px
+        font-weight: 400
+        text-align: center
+        margin-bottom: 44px
+        letter-spacing: 2px
+    &__title-text
+        font-size: 50px
+        font-weight: 400
+        text-align: center
+        max-width: 1244px
+        margin-bottom: 25px
+        letter-spacing: 2px
+    &__line
+        margin-left: 490px
+        padding-bottom: 65px
+
+//_________________ТРЕТЬЯ СЕКЦИЯ_______________
+
+.third-section
+    min-height: 750px
+    &__container
+        position: relative
+        padding-top: 106px
+        // background-color: #F6F6F6
+        text-align: center
+    &__text-small
+        margin-bottom: 27px
+    &__text-big
+        margin-bottom: 50px
+    &__cards-box
+        display: flex
+        flex-direction: row
+    &__cards-item
+        margin-right: 22px
+        &:last-child
+            margin-right: 0
+//карточки описания Мисии
+.cards-item
+    position: relative
+    width: 360px
+    height: 360px
+    border-radius: 50px
+    padding-top: 15px
+    // box-shadow: 0px 7px 12px 5px rgba(34, 60, 80, 0.14)
+    box-shadow: -1px 5px 11px 2px rgba(34, 60, 80, 0.2)
+    margin-bottom: 50px
+    &__icon
+        width: 133px
+        margin-bottom: 25px
+    &__textOrange
+        margin-bottom: 20px
+        letter-spacing: 2px
+    &__textBlack
+        font-size: 20px
+        letter-spacing: 2px
+        padding: 10px
+
+//_____________ЧЕТВЕРТАЯ СЕКЦИЯ_________________
+
+.fourth-section
+    min-height: 750px
+    &__container
+        position: relative
+        text-align: center
+    &__text-small
+        margin-bottom: 30px
+    &__text-big
+        margin-bottom: 30px
+    &__cards-box2
+        display: flex
+        flex-direction: row
+    &__box2-item
+        margin-right: 45px
+        &:last-child
+            margin-right: 0
+
+.box2-item
+    position: relative
+    width: 380px
+    box-shadow: -1px 5px 11px 2px rgba(34, 60, 80, 0.2)
+    border-radius: 50px
+    margin-bottom: 50px
+    // padding: 5px
+    &__img
+        margin-bottom: 10px
+        // border-radius: 50px
+    &__wrapper-text
+        padding-right: 15px
+        padding-left: 15px
+        text-align: center
+    &__text-superSmall
+        font-size: 15px
+        letter-spacing: 2px
+        margin-bottom: 15px
+    &__textOrange
+        font-size: 32px
+        font-weight: 700
+        color: $color-orange
+        margin-bottom: 10px
+        letter-spacing: 2px
+    &__textBlack
+        letter-spacing: 2px
+        margin-bottom: 30px        
+    &__btn
+        width: 290px
+        margin-left: 30px
+        margin-bottom: 15px
+        font-weight: 700
+        height: 50px
+        font-size: 20px
+        
+
+// ______________ПЯТАЯ СЕКЦИЯ_______________
+
+.fifth-section
+    min-height: 750px
+    &__container
+        position: relative
+        background-color: #FFF8F3
+        text-align: center
+        // padding-left: 38px
+        // padding-right: 38px
+        padding: 38px
+        border-radius: 50px
+    &__text-small
+        margin-bottom: 50px
+    &__cards-box3
+        display: flex
+        flex-direction: row
+    &__box3-item
+        margin-right: 22px
+        &:last-child
+            margin-right: 0
+
+//карточки описания Достижений
+.box3-item
+    position: relative
+    width: 360px
+    height: 310px
+    border-radius: 50px
+    padding-top: 15px
+    box-shadow: -1px 5px 11px 2px rgba(34, 60, 80, 0.2)
+    background-color: #FFFFFF
+    &__icon
+        width: 133px
+        margin-bottom: 30px
+    &__textMix
+        font-size: 30px
+        letter-spacing: 2px
+        font-weight: 700
