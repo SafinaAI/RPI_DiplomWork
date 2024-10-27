@@ -58,6 +58,7 @@ body
     font-size: 16px
     color: #2E2E2E
     background-color: #ffffff
+    line-height: 26px
 
 // body, html
 //     font-family: "Khula", sans-serif
@@ -80,7 +81,7 @@ button
     // &__:hover
     //     background-color: $color-orange-hover
 
-.line
+.line //серая линия ограничиваяющая секции
     max-width: 284px
     color: #2E2E2E
     bottom: 0px
@@ -88,21 +89,30 @@ button
     border: none
     border-top: 2px solid #2e2e2ead
 
-.text-small
+.demarcationLine     // вертикалльная линия, которая в верхнем меню разделяет элементы черточкой и в самом низу страницы тоже разделяет политику конфидециальности
+    border-right: 1px solid #2e2e2e6b 
+    margin-right: 10px
+    height: 20px
+
+.text-small // можно сказать стандартный текст на всей странице
     font-size: 35px
     font-weight: 400
     letter-spacing: 2px
 
-.text-big
+.text-big // это самй боьшой тест на странице , преминяется для заголовков секций
     font-size: 65px
     font-weight: 400  
     letter-spacing: 2px
+    line-height: 70px
 
-.text-superSmall
+.text-middle // применяется в нескольких местах для текста , который меньще чем биг, но больше чем смолл
+    line-height: 55px
+
+.text-superSmall // применяется в 4-ой секции
     font-size: 15px
     font-weight: 400  
 
-.textOrange
+.textOrange 
     font-size: 32px
     font-weight: 700
     color: $color-orange
@@ -110,9 +120,11 @@ button
 .textBlack
     font-size: 20px
 
-.orange-word
+.orange-word // окрашивает слова в оранжевый
     color: $color-orange
 
+
+    
 //____HEADER____
 
 .container
@@ -123,9 +135,9 @@ button
 
 .section-header
     position: relative
-    height: 90px
+    height: 185px
     padding-top: 16px
-    margin-bottom: 47px   
+    // margin-bottom: 47px   
     &__firstNav
 
 
@@ -136,7 +148,7 @@ button
         box-shadow: 0px 7px 15px 4px rgba(34, 60, 80, 0.2)
         border-radius: 50px
     &__logo
-        width: 145px
+        width: 180px
         margin-left: 25px
     &__nav
     &__list
@@ -161,8 +173,8 @@ button
         padding: 10px
         &:last-child
             margin-right: 0px
-    &____br
-        rotate: 90deg
+    &__hr
+        height: 30px
 
 //Основное меню по странице
 .nav-menu   
@@ -187,6 +199,8 @@ button
         margin-right: 24px
         box-shadow: 0px 1px 5px 4px rgba(34, 60, 80, 0.2)
         color: #2E2E2E
+        margin-top: 10px
+        margin-bottom: 10px
     &__LogIn-img
         width: 20px
         margin-right: 10px
@@ -197,6 +211,8 @@ button
         width: 184px
         height: 44px
         box-shadow: 0px 1px 5px 4px rgba(34, 60, 80, 0.2)
+        margin-top: 10px
+        margin-bottom: 10px
 
 //____________ПЕРВАЯ СЕКЦИЯ (ФОТО + ТЕКСТ)__________
 
@@ -209,13 +225,14 @@ button
     position: relative
     &__img
         position: relative
+        // margin-top: 50px
 
 //правая часть
 .right-wrapper
-    width: 372px
+    width: 700px
     position: absolute
     top: 100px
-    right: 180px
+    right: 0px
     &__title
         font-size: 38px
         font-weight: 700
@@ -225,9 +242,9 @@ button
         text-align: right
         letter-spacing: 2px
     &__text
-        font-size: 25px
+        font-size: 30px
         font-weight: 400
-        min-width: 540px
+        // min-width: 540px
         line-height: 30px
         text-align: right
         letter-spacing: 2px
@@ -341,20 +358,20 @@ button
     &__text-superSmall
         font-size: 15px
         letter-spacing: 2px
-        margin-bottom: 15px
+        margin-bottom: 20px
     &__textOrange
         font-size: 32px
         font-weight: 700
         color: $color-orange
-        margin-bottom: 10px
+        margin-bottom: 15px
         letter-spacing: 2px
     &__textBlack
         letter-spacing: 2px
-        margin-bottom: 30px        
+        margin-bottom: 35px        
     &__btn
         width: 290px
         margin-left: 30px
-        margin-bottom: 15px
+        margin-bottom: 25px
         font-weight: 700
         height: 50px
         font-size: 20px
@@ -363,7 +380,7 @@ button
 // ______________ПЯТАЯ СЕКЦИЯ_______________
 
 .fifth-section
-    min-height: 750px
+    min-height: 520px
     &__container
         position: relative
         background-color: #FFF8F3
@@ -398,3 +415,186 @@ button
         font-size: 30px
         letter-spacing: 2px
         font-weight: 700
+
+
+
+//__________________ШЕСТАЯ СЕКЦИЯ_________________
+
+.sixth-section
+    min-height: 950px
+    &__container
+        position: relative
+        text-align: center
+    
+    &__text-small
+        margin-bottom: 30px
+    &__text-big
+        margin-bottom: 30px
+    &__cards-box4
+        display: flex
+        flex-direction: row
+    &__box4-item
+        margin-right: 30px
+        &:last-child
+            margin-right: 0
+    &__dots
+
+.box4-item
+    position: relative
+    width: 370px
+    box-shadow: -1px 5px 11px 2px rgba(34, 60, 80, 0.2)
+    border-radius: 50px
+    margin-bottom: 50px
+    &__left-arrow
+        margin-right: 13px
+    &__right-arrow
+        margin-left: 13px
+    &__img
+        margin-bottom: 35px
+        border-radius: 50px
+        width: 370px
+    &__text-title
+        font-size: 30px
+        margin-bottom: 15px
+        letter-spacing: 2px
+    &__text-info
+        letter-spacing: 2px
+        margin-bottom: 35px
+    &__btn
+        margin-bottom: 20px
+
+
+
+//________________СЕДЬМАЯ СЕКЦИЯ______________
+
+.seventh-section
+    min-height: 250px
+    &__container
+        position: relative
+        text-align: center
+    &__wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__text
+        font-size: 50px
+        text-align: left
+    &__subscription-form-container 
+    &__subscription-form 
+        display: flex
+        border: 2px solid #fcf6f1 // Граница формы
+        border-radius: 15px // Скругление углов
+        overflow: hidden // Скрытие краев
+        // background-color: #ff9a4b33 // Единый фон для формы
+        width: 500px
+        input[type="email"] 
+            border: none
+            padding: 15px
+            flex: 1 // Занять все доступное пространство
+            font-size: 18px
+            color: #F19A56 // Цвет текста
+            background-color: #fcf6f1 // Тот же фон, что и у формы
+            &::placeholder 
+                color: #F19A56 // Цвет плейсхолдера
+        input[type="submit"] 
+            position: relative
+            border: none
+            padding: 10px 20px
+            font-size: 19px
+            text-decoration: underline
+            cursor: pointer
+            background-color: #fcf6f1 // Цвет кнопки
+            color: #f6a15b // Цвет текста кнопки
+            transition: background-color 0.3s
+            // transition: text-decoration-color 0.3s
+            //.orange:color
+               // text-decoration-color: orange
+            &::hover 
+                background-color: #e57e24 // Цвет кнопки при наведении
+    &__icons-box
+        display: flex
+        flex-direction: row
+.icons-box
+    margin-top: 25px
+    position: relative
+    margin-bottom: 25px
+    &__item
+        margin-right: 25px
+        &:last-child
+            margin-right: 0
+       
+
+
+//___________ВОСЬМАЯ СЕКЦИЯ FOOTER____________       
+    
+
+.footer-section
+    min-height: 320px
+    &__container
+        position: relative
+        text-align: left
+    &__orangeLine
+        margin-bottom: 50px
+        border-bottom: 5px solid #F19A56 
+    &__wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__item
+        margin-right: 30px
+        &:last-child
+            margin-right: 0
+.fotter-item
+    position: relative
+    &__logo
+        margin-right: 170px
+    &__title
+        font-size: 22px
+        letter-spacing: 2px
+        margin-bottom: 20px
+    &__list
+.footer-list
+    &__item
+        margin-bottom: 20px
+    &__link
+        font-size: 16px
+        letter-spacing: 2px
+
+
+
+//_____________ДЕВЯТАЯ СЕКЦИЯ_____________
+
+.ninth-section
+    min-height: 130px
+    &__container
+        position: relative
+        text-align: left
+    &__greyLine
+         border-bottom: 3px solid #2e2e2e9c
+         margin-bottom: 35px
+    &__wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__left-text
+        flex: 1
+        margin-right: 91px
+        line-height: 18px
+        letter-spacing: 2px
+        font-size: 12px
+    &__right-text
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+.right-text
+    &__privacyPolicy
+        margin-right: 10px
+        line-height: 18px
+        letter-spacing: 2px
+        font-size: 12px
+    &__line
+    &__termsOfService
+        line-height: 18px
+        letter-spacing: 2px
+        font-size: 12px
