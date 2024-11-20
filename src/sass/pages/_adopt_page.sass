@@ -1,0 +1,97 @@
+// ------------ ФОТО + ФОРМА -------------
+
+.first-section
+    margin-bottom: 6rem
+    &__container
+        max-width: 1260px
+        margin: 0 auto
+        position: relative
+        padding: 0rem 3.8rem
+        overflow: hidden
+        height: 50vh
+        
+        
+    &__background-img
+        
+        position: relative
+        width: 100%
+        height: 60rem
+        opacity: .8
+        margin-bottom: 20rem    
+        background-image: url('/src/img/try3.png') 
+        background-size: cover           
+        background-position: center      
+        background-repeat: no-repeat  
+           
+    &__text-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center   
+    &__title
+        position: absolute
+        top: 8rem
+        color: #ff6800
+        
+        
+    &__text
+        position: absolute
+        top: 17rem
+        color: #ff6800
+        
+    &__btns
+        position: absolute
+        display: flex
+        justify-content: space-between
+        top: 24rem
+    &__btns-animals
+        margin-right: 5rem
+        width: 18rem
+        height: 6rem
+    &__btns-donat
+        width: 18rem
+        height: 6rem
+
+
+// ЖИВОТНЫЕ ГОТОВЫЕ К УСЫНОВЛЕНИЮ
+
+
+.second-section
+    &__container
+        text-align: center
+    &__text-small
+        margin-bottom: 5rem
+    &__text-big
+        margin-bottom: 5rem
+    &__line
+        margin-bottom: 5rem
+    &__adob-cards-box1
+        display: flex
+        flex-direction: row
+    &__adob-box1-item
+        margin-right: 2.2rem       
+        &:last-child
+            margin-right: 0
+
+.adob-box1-item
+    margin-bottom: 5rem 
+    position: relative
+    width: 37rem
+    box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    border-radius: 5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 1
+    align-items: center
+    &__img
+        width: 100%
+        margin-bottom: 3rem
+        border-radius: 5rem
+        height: 220px            // Задаем фиксированную высоту для изображений
+        object-fit: cover
+    &__pet-name
+        margin-bottom: 1.5rem
+    &__pet-age
+    &__pet-city
+        margin-bottom: 3rem
