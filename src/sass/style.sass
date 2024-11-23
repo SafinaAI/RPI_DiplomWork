@@ -119,16 +119,16 @@
 
 .main-section
     // height: 80vh
-    @include respond(small-computer)
-        height: 75vh
-    @include respond(vertical-tab)
-        height: 55vh
-    @include respond(gorizontal-tab)
-        height: 46vh
-    @include respond(gorizontal-phone)
-        height: 48vh // изменяем высоту на автоматическую для мобильных устройств
-        padding: 2rem // добавляем отступы для лучшего восприятия
-        background-color: #857263
+    // @include respond(small-computer)
+    //     height: 75vh
+    // @include respond(vertical-tab)
+    //     height: 55vh
+    // @include respond(gorizontal-tab)
+    //     height: 46vh
+    // @include respond(gorizontal-phone)
+    //     height: 48vh // изменяем высоту на автоматическую для мобильных устройств
+    //     padding: 2rem // добавляем отступы для лучшего восприятия
+    //     background-color: #857263
     &__container
         @include respond(gorizontal-phone)
             display: flex
@@ -150,20 +150,18 @@
         // justify-content: center // центрируем изображение
         // margin-bottom: 2rem // добавляем отступ снизу
     @include respond(vertical-phone)
-        width: 90%
+        width: 80%
         
     &__img
         position: relative
         width: 50%
         @include respond(gorizontal-phone)
-            width: 100% // уменьшаем ширину изображения для мобильных
-            opacity: .65
+            width: 80% // уменьшаем ширину изображения для мобильных
+            opacity: .35
         @include respond(vertical-phone)
-            width: 100% // уменьшаем ширину изображения для мобильных
-            opacity: .65
+            width: 80% // уменьшаем ширину изображения для мобильных
+            opacity: .35
        
-
-
 //правая часть
 .right-wrapper
     width: 57%
@@ -180,13 +178,13 @@
         top: 5rem
     @include respond(gorizontal-phone)
         width: 100% // устанавливаем ширину 100% для мобильных
-        position: relative // изменяем позиционирование на относительное
+        // position: relative // изменяем позиционирование на относительное
         text-align: center // выравниваем текст по центру
+        align-items: center
     @include respond(vertical-phone)
         width: 100% // устанавливаем ширину 100% для мобильных
-        position: relative // изменяем позиционирование на относительное
+        // position: relative // изменяем позиционирование на относительное
         text-align: center // выравниваем текст по центру
-
     &__title
         font-size: 3.7rem
         font-weight: 700
@@ -211,17 +209,16 @@
             line-height: 4rem
             margin-bottom: 2rem
         @include respond(gorizontal-phone)
-            font-size: 7.8rem
-            top: -92rem
-            color: white
+            font-size: 5.8rem
             text-align: center
             position: relative
             font-weight: 700
             margin-bottom: 2rem
-            line-height: 9rem
+            line-height: 7rem
+            margin-top: 5rem           
         @include respond(vertical-phone)
-            font-size: 7rem
-            line-height: 8rem
+            font-size: 6rem
+            line-height: 7rem
     &__text
         font-size: 3.2rem
         font-weight: 400
@@ -244,16 +241,14 @@
             font-size: 2rem
             line-height: 2.8rem
         @include respond(gorizontal-phone)
-            font-size: 6rem
-            line-height: 7rem
-            padding: 0 4rem
+            font-size: 4.5rem
+            line-height: 5rem
+            padding: 0 10rem
             text-align: center
-            color: white
             position: relative
-            top: -92rem
         @include respond(vertical-phone)
-            font-size: 5rem
-            line-height: 6rem
+            font-size: 4rem
+            line-height: 5rem
 
 
 
@@ -264,16 +259,16 @@
 .secnd-section
     // min-height: 40rem
     // height: 70vh
-    @include respond(small-computer)
-        height: 70vh
-    @include respond(vertical-tab)
-        height: 53vh
-    @include respond(gorizontal-tab)
-        height: 45vh
-    @include respond(gorizontal-phone)
-        height: auto
-    @include respond(vertical-phone)
-        height: auto
+    // @include respond(small-computer)
+    //     height: 70vh
+    // @include respond(vertical-tab)
+    //     height: 53vh
+    // @include respond(gorizontal-tab)
+    //     height: 45vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    // @include respond(vertical-phone)
+    //     height: auto
     &__container     
         position: relative
         display: flex
@@ -346,16 +341,16 @@
 
 .third-section
     // height: 103vh
-    @include respond(small-computer)
-        height: 103vh
-    @include respond(vertical-tab)
-        height: 100vh
-    @include respond(gorizontal-tab)
-        height: 80vh
-    @include respond(gorizontal-phone)
-        height: auto
-    @include respond(vertical-phone)
-        height: auto
+    // @include respond(small-computer)
+    //     height: 103vh
+    // @include respond(vertical-tab)
+    //     height: 100vh
+    // @include respond(gorizontal-tab)
+    //     height: 80vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    // @include respond(vertical-phone)
+    //     height: auto
     &__container
         position: relative
         // background-color: #F6F6F6
@@ -463,16 +458,16 @@
 
 .fourth-section
     // height: 150vh
-    @include respond(small-computer)
-        height: 142vh
-    @include respond(vertical-tab)
-        height: 140vh
-    @include respond(gorizontal-tab)
-        height: 108vh
-    @include respond(gorizontal-phone)
-        height: auto
-    @include respond(vertical-phone)
-        height: auto
+    // @include respond(small-computer)
+    //     height: 142vh
+    // @include respond(vertical-tab)
+    //     height: 140vh
+    // @include respond(gorizontal-tab)
+    //     height: 108vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    // @include respond(vertical-phone)
+    //     height: auto
     &__container
         position: relative
         text-align: center
@@ -545,6 +540,8 @@
         margin-bottom: 1rem
         width: 100%
         // object-fit: cover
+        &:hover
+            transform: scale(1) rotateZ(2deg)
         @include respond(gorizontal-phone)
             // width: 30%
             margin-bottom: 4rem
@@ -642,14 +639,14 @@
 
 .fifth-section
     // height: 80vh
-    @include respond(small-computer)
-        height: 73vh
-    @include respond(vertical-tab)
-        height: 75vh
-    @include respond(gorizontal-tab)
-        height: 52vh
-    @include respond(gorizontal-phone)
-        height: auto
+    // @include respond(small-computer)
+    //     height: 73vh
+    // @include respond(vertical-tab)
+    //     height: 75vh
+    // @include respond(gorizontal-tab)
+    //     height: 52vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
     &__container
         padding: 4rem
         position: relative
@@ -723,14 +720,14 @@
 
 .sixth-section
     // height: 130vh
-    @include respond(small-computer)
-        height: 130vh
-    @include respond(vertical-tab)
-        height: 120vh
-    @include respond(gorizontal-tab)
-        height: 95vh
-    @include respond(gorizontal-phone)
-        height: auto
+    // @include respond(small-computer)
+    //     height: 130vh
+    // @include respond(vertical-tab)
+    //     height: 120vh
+    // @include respond(gorizontal-tab)
+    //     height: 95vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
     &__container
         position: relative
         text-align: center
@@ -787,6 +784,8 @@
         margin-bottom: 3.5rem
         border-radius: 5rem
         width: 100%
+        &:hover
+            transform: scale(1) rotateZ(2deg)
         @include respond(gorizontal-phone)
             // width: 30%
             margin-bottom: 6rem
@@ -841,14 +840,14 @@
 
 .seventh-section
     // height: 25vh
-    @include respond(small-computer)
-        height: 22vh
-    @include respond(vertical-tab)
-        height: 25vh
-    @include respond(gorizontal-tab)
-        height: 18vh
-    @include respond(gorizontal-phone)
-        height: auto
+    // @include respond(small-computer)
+    //     height: 22vh
+    // @include respond(vertical-tab)
+    //     height: 25vh
+    // @include respond(gorizontal-tab)
+    //     height: 18vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
     &__container
         position: relative
         text-align: center
@@ -893,14 +892,14 @@
 
 .footer-section
     // height: 43vh
-    @include respond(small-computer)
-        height: 43vh
-    @include respond(gorizontal-tab)
-        height: 30vh
-    @include respond(gorizontal-tab)
-        height: 28vh
-    @include respond(gorizontal-phone)
-        height: auto
+    // @include respond(small-computer)
+    //     height: 43vh
+    // @include respond(gorizontal-tab)
+    //     height: 30vh
+    // @include respond(gorizontal-tab)
+    //     height: 28vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
     &__container
         position: relative
         text-align: left
@@ -967,10 +966,10 @@
 
 .ninth-section
     // height: 25vh
-    @include respond(small-computer)
-        height: 25vh
-    @include respond(gorizontal-phone)
-        height: auto
+    // @include respond(small-computer)
+    //     height: 25vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
     &__container
         position: relative
         text-align: left
