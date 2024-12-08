@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="./src/js/js-libraries/glide.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./src/js/js-libraries/glide.core.min.css" />
+    <link rel="stylesheet" href="./src/js/js-libraries/glide.theme.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Khula:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Счастливые истории</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
+  <body class="readMoreStorys-app">
+    <!-- <main id="story-container">
+      <p>Загрузка историй...</p>
+    </main> -->
+    
+    
+    <script src="./src/readMoreStorys.js" type="module"></script>
+    <script>
+      // Функция для извлечения параметра id из URL
+      function getStoryIdFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get("id");
+      }
+
+      // Загрузка историй из JSON
+      async function loadStories() {
+        try {
+          const response = await fetch("./src/data/stories.json");
+          if (!response.ok) {
+            throw new Error("Не удалось загрузить данные.");
+          }
+          const stories = await response.json();
+          return stories;
+        } catch (error) {
+          console.error(error);
+          return [];
+        }
+      }
+
+      // Отображение карточек историй
+      async function displayStories() {
+        const stories = await loadStories();
+        const container = document.getElementById("story-container");
+
+        container.innerHTML = `
+          <div class="readMoreStorys__storys-box4 container">
+            ${stories
+              .map(
+                (story) => `
+                <div class="readMoreStorys__storys-item storys-item" data-id="${
+                  story.id
+                }">
+                  <img class="storys-item__img" src="${story.image}" alt="${
+                  story.title
+                }" />
+                  <p class="storys-item__text-title textBlack">${
+                    story.title
+                  }</p>
+                  <div class="storys-item__wrapper-textInfo">
+                    <p class="storys-item__text-info textBlack">
+                      ${story.content.substring(0, 100)}...
+                    </p>
+                  </div>
+                  <button class="storys-item__btn button" onclick="goToStory('${
+                    story.id
+                  }')">Читать</button>
+                </div>
+              `
+              )
+              .join("")}
+          </div>
+        `;
+      }
+
+      // Отображение одной истории
+      async function displayStory(storyId) {
+        const stories = await loadStories();
+        const story = stories.find((item) => item.id === storyId);
+        const container = document.getElementById("story-container");
+
+        if (story) {
+          container.innerHTML = `
+          <div class="readOneStory container">
+            <h2 class="readOneStory__titel textBlack">${story.title}</h2>
+            <img src="${story.image}" alt="${story.title}" class="story-image readOneStory__image" />
+            <p class="readOneStory__text textBlack">${story.content}</p>
+          </div>
+          `;
+        } else {
+          container.innerHTML = `
+            <p>История не найдена. Пожалуйста, выберите другую историю.</p>
+          `;
+        }
+      }
+
+      // Переход к нужной истории
+      function goToStory(id) {
+        window.location.href = `./readMoreStorys.html?id=${id}`;
+      }
+
+      // Инициализация
+      async function init() {
+        const storyId = getStoryIdFromURL();
+
+        if (storyId) {
+          await displayStory(storyId); // Показать одну историю
+        } else {
+          await displayStories(); // Показать все истории
+        }
+      }
+
+      init();
+    </script>
+  </body>
+</html>

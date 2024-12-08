@@ -15,6 +15,7 @@
 
 @import "pages/_home.sass"
 @import "pages/_adopt_page.sass"
+@import "pages/_readMoreStorys.sass"
 
 @import "layout/_header.sass"
 @import "layout/_formEmail.sass"
@@ -297,7 +298,7 @@
             align-items: center
 
     &__text
-        font-size: rem
+        font-size: 3.2rem
         font-weight: 400
         text-align: center
         margin-bottom: 4.4rem
@@ -760,7 +761,32 @@
         @include respond(gorizontal-phone)
             margin-right: 0
             width: 80%
-    &__dots
+    &__but
+        width: 40rem
+        height: 8rem
+        font-size: 4rem
+        margin-bottom: 6rem
+        &:focus, &:hover
+            font-size: 4rem
+        @include respond(gorizontal-phone)
+            width: 30%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+        @include respond(vertical-phone)
+            width: 40%
+            height: 10.5rem
+            margin-top: 2rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
 
 .box4-item
     position: relative
