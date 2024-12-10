@@ -1,4 +1,5 @@
 import { createElement } from "../../framework/render.js";
+import { loadPetsData } from "../../dataLoader.js";
 
 function createAdoptSecondSecComponentTemplate() {
   return `<section class="adob-second-section">
@@ -77,7 +78,73 @@ function createAdoptSecondSecComponentTemplate() {
   `;
 }
 
+function showPetInfoModal(pet) {
+  // Создать контейнер модального окна
+  const modal = document.createElement("div");
+  modal.className = "modal";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2>${pet.title}</h2>
+      <p><strong>Возраст:</strong> ${pet.age || "Не указан"}</p>
+      <p><strong>Пол:</strong> ${pet.gender || "Не указан"}</p>
+      <p><strong>Город:</strong> ${pet.city || "Не указан"}</p>
+      <p>${pet.description || "Описание отсутствует."}</p>
+      <button class="modal-contact-btn ">Связаться с приютом</button>
+      <div class="modal-contact-info" style="display: none;">
+        <p>Телефон: ${pet.phone || "Не указан"}</p>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  // Обработчики закрытия
+  const closeModal = () => modal.remove();
+  modal.querySelector(".modal-close").addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // Обработчик кнопки "Связаться с приютом"
+  modal.querySelector(".modal-contact-btn").addEventListener("click", () => {
+    const contactInfo = modal.querySelector(".modal-contact-info");
+    contactInfo.style.display = "block";
+  });
+}
+
 export default class AdoptSecondSecComponent {
+  constructor() {
+    this.petsData = [];
+  }
+
+  async init() {
+    this.petsData = await loadPetsData();
+    this.setupCardListeners();
+    this.setupLearnMoreButton();
+  }
+
+  setupCardListeners() {
+    const cards = document.querySelectorAll(
+      ".adob-second-section__adob-box1-item"
+    );
+    cards.forEach((card, index) => {
+      card.addEventListener("click", () =>
+        showPetInfoModal(this.petsData[index])
+      );
+    });
+  }
+
+  setupLearnMoreButton() {
+    const learnMoreButton = document.querySelector(".adob-second-section__btn");
+    if (learnMoreButton) {
+      learnMoreButton.addEventListener("click", () => {
+        localStorage.setItem("petsData", JSON.stringify(this.petsData));
+        window.location.href = "adoptYourFriend.html";
+      });
+    }
+  }
+
   getTemplate() {
     return createAdoptSecondSecComponentTemplate();
   }

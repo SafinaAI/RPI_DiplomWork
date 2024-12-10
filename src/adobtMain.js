@@ -11,9 +11,13 @@ import { render, RenderPosition } from "./framework/render.js";
 
 const bodyContainer = document.querySelector(".adopt-app");
 
+const adoptSecondSecComponent = new AdoptSecondSecComponent();
+
+
 render(new AdoptHeaderComponent(), bodyContainer);
 render(new AdoptFirstSecComponent(), bodyContainer);
 render(new AdoptSecondSecComponent(), bodyContainer);
+adoptSecondSecComponent.init();
 render(new AdoptThirdSecComponent(), bodyContainer);
 render(new AdoptFourthSecComponent(), bodyContainer);
 render(new AdoptFifthSecComponent(), bodyContainer);

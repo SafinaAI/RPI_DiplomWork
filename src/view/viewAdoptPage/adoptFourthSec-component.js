@@ -10,7 +10,7 @@ function createAdoptFourthSecComponentTemplate() {
         </p>
         <!-- карточки описания Отзывов -->
         <div class="adob-fourth-section__adob-cards-box3">
-          <div class="adob-fourth-section__adob-box3-item adob-box3-item " data-id="1">
+          <div class="adob-fourth-section__adob-box3-item adob-box3-item " data-id="10">
             <img
               class="adob-box3-item__img"
               src="./src/img/adob_fourth_section_card1.jfif"
@@ -25,7 +25,7 @@ function createAdoptFourthSecComponentTemplate() {
             <button class="adob-box3-item__btn button">Читать</button>
           </div>
           <!-- карточка 2 -->
-          <div class="adob-fourth-section__adob-box3-item adob-box3-item" data-id="2">
+          <div class="adob-fourth-section__adob-box3-item adob-box3-item" data-id="11">
             <img
               class="adob-box3-item__img"
               src="./src/img/adob_fourth_section_card2.jfif"
@@ -41,7 +41,7 @@ function createAdoptFourthSecComponentTemplate() {
             <button class="adob-box3-item__btn button">Читать</button>
           </div>
           <!-- карточка 3 -->
-          <div class="adob-fourth-section__adob-box3-item adob-box3-item" data-id="3">
+          <div class="adob-fourth-section__adob-box3-item adob-box3-item" data-id="12">
             <img
               class="adob-box3-item__img"
               src="./src/img/adob_fourth_section_card3.jfif"
@@ -58,7 +58,7 @@ function createAdoptFourthSecComponentTemplate() {
           </div>
         </div>
         <div class="adob-fourth-section__dots"></div>
-        <button class="adob-fourth-section__btn button">Узнать больше</button>
+        <button class="adob-fourth-section__btn button" id="read-more-button">Узнать больше</button>
         <hr class="adob-fourth-section__line line" />
       </div>
     </section>
@@ -67,6 +67,10 @@ function createAdoptFourthSecComponentTemplate() {
 }
 
 export default class AdoptFourthSecComponent {
+  constructor() {
+    this.element = null;
+  }
+
   getTemplate() {
     return createAdoptFourthSecComponentTemplate();
   }
@@ -74,12 +78,38 @@ export default class AdoptFourthSecComponent {
   getElement() {
     if (!this.element) {
       this.element = createElement(this.getTemplate());
+      this.#setEventListeners();
     }
-
     return this.element;
   }
 
   removeElement() {
     this.element = null;
+  }
+
+  #setEventListeners() {
+    // Обработчик для кнопки "Читать больше"
+    const readMoreButton = this.element.querySelector("#read-more-button");
+    readMoreButton.addEventListener("click", () => {
+      window.location.href = "./readMoreStorys.html";
+    });
+
+    // Обработчики для кнопок в карточках
+    const cardButtons = this.element.querySelectorAll(".adob-box3-item__btn");
+
+    cardButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const cardElement = event.target.closest(".adob-box3-item"); // Находим родительский элемент с `data-id`
+        const storyId = cardElement.dataset.id; // Получаем id из data-id
+        console.log(`Идентификатор истории: ${storyId}`); // Логируем id для проверки
+
+        // Проверка, что storyId определен
+        if (storyId) {
+          window.location.href = `./readMoreStorys.html?id=${storyId}`;
+        } else {
+          console.error("Ошибка: Идентификатор истории не найден.");
+        }
+      });
+    });
   }
 }

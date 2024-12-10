@@ -1,0 +1,176 @@
+
+.modal 
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 1000
+
+.modal-content 
+  background: #fff
+  padding: 2.5rem
+  border-radius: 1.5rem
+  width: 50%
+  max-width: 85rem
+  position: relative
+  text-align: left
+
+
+.modal-close 
+  position: absolute
+  top: 10px
+  right: 15px
+  font-size: 2.5rem
+  cursor: pointer
+
+
+.modal-contact-btn 
+  margin-top: 20px
+  padding: 10px 20px
+  background-color: $color-orange-focus
+  color: #fff
+  border: none
+  border-radius: 1rem
+  cursor: pointer
+  height: 6rem
+  width: 20rem
+  &:focus, &:hover
+    background-color: $color-orange-focus       
+    font-size: 1.6rem
+    transition: all 0.5s
+    box-shadow: 0px 2px 5px 4px rgba(34, 60, 80, 0.3)
+    font-size: 1.8rem
+    
+
+
+.modal-contact-info 
+  margin-top: 15px
+  font-size: 14px
+  color: #333
+
+//------
+
+
+
+.adoptFriendText-section
+  &__container
+    position: relative
+    text-align: center
+  &__text-small
+  &__text-big
+
+
+
+//----
+
+.adobtYourFriendText-section
+  &__container     
+    position: relative
+    display: flex
+    flex-direction: column
+    background-color: #FFF8F3
+    border-radius: 3rem
+    box-shadow: 0.1rem 0.2rem 0.8rem 0.1rem rgba(34, 60, 80, 0.21)   
+    padding-top: 10rem
+    padding-left: 4rem
+    padding-left:  4rem   
+    margin-bottom: 10rem
+      @include respond(vertical-tab)
+        padding-top: 6.5rem
+      @include respond(gorizontal-tab)
+        padding-top: 8rem
+      @include respond(gorizontal-phone)
+        text-align: center
+        padding-left: 0
+        padding-right: 0
+        align-items: center
+      @include respond(vertical-phone)
+        text-align: center
+        padding-left: 0
+        padding-right: 0
+        align-items: center
+  &__text
+    font-size: 3.2rem
+    font-weight: 400
+    text-align: center
+    margin-bottom: 4.4rem
+      @include respond(vertical-tab)
+        font-size: 2.7rem
+        font-weight: 400
+        text-align: center
+        margin-bottom: 3rem
+      @include respond(gorizontal-tab)
+        font-size: 2.7rem
+        margin-bottom: 3rem
+      @include respond(gorizontal-phone)
+        font-size: 3.5rem
+  &__title-text
+    font-size: 4.7rem
+    font-weight: 400
+    text-align: center
+    max-width: 124.4rem
+    margin-bottom: 2.5rem
+      @include respond(vertical-tab)
+        font-size: 3.8rem
+        font-weight: 400
+        text-align: center
+        max-width: 124.4rem
+        margin-bottom: 2rem
+        line-height: 4.8rem
+      @include respond(gorizontal-tab)
+        font-size: 3.5rem
+        margin-bottom: 4rem
+      @include respond(gorizontal-phone)
+        font-size: 5rem
+        line-height: 6rem
+  &__line
+    margin: auto
+    padding-bottom: 6.5rem
+    text-align: center
+      @include respond(vertical-tab)
+        padding-bottom: 2.5rem
+
+
+//----
+
+.adopt-cards-container 
+  display: grid
+  grid-template-columns: 30% 30% 30% 
+  
+  justify-content: center
+  grid-column-gap: 5rem
+  grid-row-gap: 5rem
+  
+.adopt-card 
+  position: relative
+  width: 37rem
+  box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+  border-radius: 5rem
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  flex: 1
+  align-items: center
+  &__img 
+    width: 100%
+    margin-bottom: 1rem
+    border-radius: 5rem
+    height: 220px            // Задаем фиксированную высоту для изображений
+    object-fit: cover
+  &__title 
+    font-size: 1.2em
+  &__details,
+  &__description 
+    padding: 2rem
+     
+  &__contact-btn 
+    margin-bottom: 2rem
+    cursor: pointer
+    height: 6rem
+    width: 60%
+
