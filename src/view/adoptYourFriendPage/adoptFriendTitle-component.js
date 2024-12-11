@@ -2,17 +2,18 @@ import { createElement } from "../../framework/render.js";
 
 function createAdoptFriendTitleComponentTemplate() {
   return `
-  <section class="secnd-section">
-      <div class="secnd-section__container container">
+  <section class="secnd-section ">
+      <div class="secnd-section__container container adoptFriend-container ">
         <p class="secnd-section__text">
           Поднимите лапки, если вы готовы нам помочь
         </p>
         <p class="secnd-section__title-text text-middle">
-          В приютах жевет много питомцев, каждый мечтает о доме. Подарите 
+          В приютах живет много питомцев, каждый мечтает о доме. Подарите 
           им свою любовь и заботу!
         </p>
         <div class="secnd-section__line line"></div>
-      </div>
+        </div>
+        <hr class="secnd-section__line line">
     </section>
 
   `;
