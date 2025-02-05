@@ -13,11 +13,11 @@ function createAdoptYourFriendHeaderComponentTemplate() {
             </li>
             <div class="firstNav__hr demarcationLine"></div>
             <li class="firstNav__list-item">
-              <a href="#">LexVet Поиск</a>
+              <a href="./LexVetSearch.html">LexVet Поиск</a>
             </li>
             <div class="firstNav__hr demarcationLine"></div>
             <li class="firstNav__list-item">
-              <a href="#">LexVet Забота</a>
+              <a href="./LexVetCare.html">LexVet Забота</a>
             </li>
           </ul>
         </div>

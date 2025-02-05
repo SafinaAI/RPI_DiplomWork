@@ -21,14 +21,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const storyId = urlParams.get("id"); // Получаем id из параметров URL
 
-  //   const storiesContainer = document.createElement("div");
-  //   storiesContainer.className = "stories-container";
-  //   bodyContainer.appendChild(storiesContainer);
-
-  // Вставляем контейнер сразу после компонента титула
-  //   const titleComponent = document.querySelector(".readStorys-title"); // Убедитесь, что класс соответствует нужному компоненту
-  //   bodyContainer.insertBefore(storiesContainer, titleComponent.nextSibling); // Вставляем сразу после титула
-
   if (storyId) {
     // Если передан ID, показываем полную историю
     const selectedStory = storiesData.find((story) => story.id === storyId);

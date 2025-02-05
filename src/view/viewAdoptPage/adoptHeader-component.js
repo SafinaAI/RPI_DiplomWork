@@ -8,15 +8,15 @@ function createAdoptHeaderComponentTemplate() {
       <div class="section-header__firstNav firstNav firstNav__container">
         <ul class="firstNav__list">
           <li class="firstNav__list-item">
-            <a href="#"> LexVet Усыновление</a>
+            <a href="./LexVetAdopt.html"> LexVet Усыновление</a>
           </li>
           <div class="firstNav__hr demarcationLine"></div>
           <li class="firstNav__list-item">
-            <a href="#">LexVet Поиск</a>
+            <a href="./LexVetSearch.html">LexVet Поиск</a>
           </li>
           <div class="firstNav__hr demarcationLine"></div>
           <li class="firstNav__list-item">
-            <a href="#">LexVet Забота</a>
+            <a href="./LexVetCare.html">LexVet Забота</a>
           </li>
         </ul>
       </div>

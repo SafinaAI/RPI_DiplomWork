@@ -1,5 +1,3 @@
-//import { AbstractComponent } from "../framework/view/abstract-component.js";
-
 const RenderPosition = {
   BEFOREBEGIN: "beforebegin",
   AFTERBEGIN: "afterbegin",

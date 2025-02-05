@@ -1,6 +1,3 @@
-// загрузка данных с MockAPI
-
-
 const BASE_URL = "https://674ece2abb559617b26cc6cd.mockapi.io/"; // Замените {project_id} на ваш ID проекта MockAPI
 
 // Загрузка данных о животных

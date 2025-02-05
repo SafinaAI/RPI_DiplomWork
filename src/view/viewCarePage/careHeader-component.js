@@ -1,7 +1,7 @@
 import { createElement } from "../../framework/render.js";
 
-function createReadStorysHeaderComponentTemplate() {
-  return `
+function  createCareHeaderComponentTemplate() {
+    return `
     <header class="section-header">
         <!-------------------------------------->
         <!-------------------------------------->
@@ -56,20 +56,21 @@ function createReadStorysHeaderComponentTemplate() {
   `;
 }
 
-export default class ReadStorysHeaderComponent {
-  getTemplate() {
-    return createReadStorysHeaderComponentTemplate();
-  }
-
-  getElement() {
-    if (!this.element) {
-      this.element = createElement(this.getTemplate());
+export default class CareHeaderComponent {
+    getTemplate() {
+      return createCareHeaderComponentTemplate();
     }
-
-    return this.element;
+  
+    getElement() {
+      if (!this.element) {
+        this.element = createElement(this.getTemplate());
+      }
+  
+      return this.element;
+    }
+  
+    removeElement() {
+      this.element = null;
+    }
   }
-
-  removeElement() {
-    this.element = null;
-  }
-}
+  
